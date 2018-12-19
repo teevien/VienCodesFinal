@@ -1,0 +1,21 @@
+// fonts
+$primaryFont: 'Montserrat', sans-serif;
+$secondaryFont: 'Libre Baskerville', serif;
+
+// colors
+$primaryColor: #333333;
+$secondaryColor: #F5F5F5;
+$accentColor:#D8BFD8;
+
+@mixin primaryFont ($size) {
+    font-family: $primaryFont;
+    color: $primaryColor;
+    letter-spacing:1.8px;
+    font-size:$size;
+}
+
+@mixin accentFont ($size){
+    font-family:$secondaryFont;
+    color: $primaryColor;
+    font-size:$size;
+}

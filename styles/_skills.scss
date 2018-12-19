@@ -1,0 +1,34 @@
+.skills-section {
+    position:relative;
+    padding:10% 0;
+
+    .skills-container {
+        display:flex;
+        justify-content: space-evenly;
+        padding:2% 0;
+
+       .skill {
+           display:flex;
+           flex-direction: column;
+           align-items: center;
+
+           i {
+               font-size:5rem;
+           }
+       }
+    }
+}
+
+@media (max-width:1026px) {
+    
+        .skills-container {
+            width:60%;
+            flex-wrap: wrap;
+            margin:20px auto 0 auto;
+
+            .skill {
+                margin-left:7%;
+                // border:1px solid red;
+            }
+        }
+    }

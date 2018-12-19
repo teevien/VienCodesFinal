@@ -1,0 +1,72 @@
+html {
+    font-size:62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+    body {
+        @include primaryFont(1.6rem);
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(../assets/Moonrise.jpg);
+        background-size:repeat;
+        max-width:100%;
+
+        .wrapper {
+            max-width:1280px;
+            width:80%;
+            margin:0 auto;
+        }
+
+        h2 {
+            @include primaryFont(3rem);
+            text-align:center;
+        }
+
+        a {
+            @include primaryFont(1.4rem);
+            text-decoration:none;
+            &:hover {
+                font-weight:bold;
+            }
+        }
+     
+        .icon-hover {
+            @include primaryFont(1.3rem);
+            text-decoration:none;
+            background: linear-gradient(45deg, #dae2f8, #d6a4a4);
+	        background-position: 0 100%;
+	        background-repeat: repeat-x;
+	        background-size: 4px 4px;
+            transition: background-size .3s;
+            &:hover {
+                background-size:4px 50px;
+                color:$primaryColor;
+            }
+        }
+    }
+}
+
+  // animation bounce
+  @-webkit-keyframes bounce {
+    0% { transform: translateY(-3px)  }
+    50% { transform: translateY(3px) }
+    100% { transform: translateY(-3px) }
+  }
+  
+  @keyframes bounce {
+    0% { transform: translateY(-3px)  }
+    50% { transform: translateY(3px) }
+    100% { transform: translateY(-3px) }
+  }
+  
+  .bounce {   
+    -webkit-animation: bounce 1s infinite ease-in-out;
+    -o-animation: bounce 1s infinite ease-in-out;
+    -ms-animation: bounce 1s infinite ease-in-out; 
+    -moz-animation: bounce 1s infinite ease-in-out; 
+    animation: bounce 1s infinite ease-in-out;
+  }
+
+@media (max-width:1056px) {
+    .wrapper {
+        width:90%;
+    }
+}

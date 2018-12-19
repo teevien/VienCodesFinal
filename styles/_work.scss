@@ -1,0 +1,104 @@
+.work-section {
+    background:$secondaryColor;
+    position:relative;
+    padding:7% 0;
+
+    &::before {
+       position:absolute;
+       content:"";
+       width:100%;
+       height:100%;
+       top:0;
+       left:0;
+       background:$secondaryColor; 
+       transform-origin:top left;
+       transform: skewY(-3deg);
+       z-index: -10;
+    }
+
+    &::after {
+        position:absolute;
+       content:"";
+       width:100%;
+       height:100%;
+       top:0;
+       left:0;
+       background:$secondaryColor; 
+       transform-origin:bottom left;
+       transform: skewY(3deg);
+       z-index: -10;
+    }
+
+    .work-container {
+        display:flex;
+        flex-wrap: wrap;
+
+        .project {
+            width:calc(50% - 30px);
+            margin:15px;
+
+            .project-title {
+                text-align:center;
+
+                h3 {
+                    margin:0;
+                }
+
+                p {
+                    @include accentFont(1.2rem);
+                    margin:0 0 10px 0;
+                    font-style:italic;
+                }
+            }
+
+            .project-image {
+                filter:grayscale(1);
+                transition:.5s;
+                    &:hover {
+                        filter:grayscale(0);
+                    }
+
+                    img {
+                    width:100%;
+                    border-radius:5px;
+                    position:relative;
+                    }
+                }
+            }
+
+            .project-links {
+                text-align:center;
+                padding:2% 0;
+            }
+
+        .extra .project-title p {
+        margin-bottom:5%;
+        }
+    }
+}
+
+  
+
+
+
+
+
+// MEDIA QUERIES
+@media (max-width:780px) {
+    .work-container .project .overlay a {
+        padding:0;
+        margin-top:15%;
+    }
+}
+
+@media (max-width:590px) {
+    .work-container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        .project {
+            width:100%;
+        }
+    }
+}
