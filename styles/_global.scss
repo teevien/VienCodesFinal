@@ -6,18 +6,23 @@ html {
     body {
         @include primaryFont(1.6rem);
         background-image: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(../assets/Moonrise.jpg);
-        background-size:repeat;
+        background-repeat:repeat;
+        background-size:100% 100%;
         max-width:100%;
 
         .wrapper {
-            max-width:1280px;
+            max-width:12800px;
             width:80%;
             margin:0 auto;
         }
 
         h2 {
-            @include primaryFont(3rem);
+            @include accentFont(3rem);
             text-align:center;
+        }
+
+        h3 {
+            margin:0 0 2% 31%;
         }
 
         a {
@@ -40,6 +45,15 @@ html {
                 background-size:4px 50px;
                 color:$primaryColor;
             }
+        }
+
+    
+        .underline {
+            width:140px;
+            height:8px;
+            display:block;
+            margin:0 auto 5% auto;
+            background:linear-gradient(to right, $accentColor2, $accentColor);
         }
     }
 }

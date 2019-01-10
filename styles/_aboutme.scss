@@ -1,7 +1,7 @@
 .about-section {
     background:$secondaryColor;
     position:relative;
-    padding:7% 5%;
+    padding-top:5%;
 
     &::before {
         position:absolute;
@@ -30,19 +30,24 @@
     }
 
     h2 {
-        @include primaryFont(3rem);
         margin:0;
         text-align:left;
     }
 
     .about-container {
        display:flex;
+        // background-image: linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url(../assets/Moonrise.jpg);
+        // border-top:1px solid $primaryColor;
+        // border-left:1px solid $primaryColor;
+        // background-position:50% 50%;
+        padding:5% 0 0 5%;
+        border-radius: 5px;
 
        .image {
            width:25%;
            margin-right:5%;
-           margin-top:2%;
-
+        //    margin-top:2%;
+ 
            img {
                width:100%;
                 border-radius:50%;
@@ -51,25 +56,101 @@
        }
 
        .content {
-            width:60%;
+            width:80%;
+
+            .underline {
+                margin:0;
+            }
        }
+    }
+
+    // SKILLS
+    .skills {
+        display:flex;
+        // border:1px solid red;
+        width:100%;
+        margin-top:5%;
+    }
+    .skills-container {
+        display:flex;
+        flex-wrap: wrap;
+        width:30%;
+        // margin:;
+        // border:1px solid red;
+
+        &:first-child {
+            margin-left:31%;
+            margin-right:10%;
+        }
+
+        h3 {
+            flex: 0 0 100%;
+            margin:0 0 2% 2%;
+            // border:1px solid red;
+        }
+      
+        .skill {
+            width:60px;
+            height:60px;
+            position:relative;
+            perspective: 800px;
+            text-align:center;
+            margin-right:15px;
+            
+            &:last-child {
+                margin-right:0;
+            }
+
+            &:hover .front {
+                transform: rotateY(180deg);
+            }
+
+            &:hover .back {
+                transform: rotateY(0deg);
+            }
+        }
+
+        .front,
+        .back {
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            backface-visibility: hidden;
+            transition: transform 0.5s;
+            padding-top:20%;
+            border-radius:50%;
+        }
+
+        .front {
+            background: linear-gradient(to right, lighten($accentColor2,10), lighten($accentColor,10));
+            font-size:4rem;
+        }
+
+        .back {
+            background:lighten($accentColor,15);
+            transform: rotateY(-180deg);
+            font-size:1.2rem;
+        }
     }
 }
 
 @media (max-width:1056px) {
     .about-container {
         .content {
-            width:50%;
-            margin-left:20px;
+            width:40%;
+            // margin-left:20px;
         }
     }
 }
 
 @media (max-width:1026px) {
     .about-container {
-
-        .content {
-            width:30%;
+        flex-direction: row-reverse;
+        .image {
+            padding-top:5%;
+            margin-left:8%;
         }
     }
 }

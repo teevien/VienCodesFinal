@@ -20,8 +20,10 @@
     }
 
     form {
-        width:45%;
+        width:50%;
         margin:5% auto;
+        // border:1px solid red;
+        padding-left:2%;
         
         .input-name, .input-email {
             width:45%;
@@ -31,12 +33,12 @@
         }
 
         .input-email {
-            margin-left:5%;
+            margin-left:6%;
         }
 
         .input-message {
             width:97%;
-            height:200px;
+            height:140px;
             margin-top:5%;
             border:none;
             background:none;

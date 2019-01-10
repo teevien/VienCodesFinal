@@ -1,7 +1,7 @@
 .work-section {
     background:$secondaryColor;
     position:relative;
-    padding:7% 0;
+    padding:7% 0 ;
 
     &::before {
        position:absolute;
@@ -32,10 +32,15 @@
     .work-container {
         display:flex;
         flex-wrap: wrap;
+        // padding:5%;
+        // border-bottom:1px solid $primaryColor;
+        // border-right:1px solid $primaryColor;
 
         .project {
             width:calc(50% - 30px);
             margin:15px;
+            padding:10px 20px;
+            background:lighten($accentColor,15);
 
             .project-title {
                 text-align:center;
@@ -46,8 +51,12 @@
 
                 p {
                     @include accentFont(1.2rem);
-                    margin:0 0 10px 0;
-                    font-style:italic;
+                    margin:10px 0;
+
+                    span {
+                        font-weight:bold;
+                        color:$accentColor;
+                    }
                 }
             }
 
@@ -77,13 +86,15 @@
     }
 }
 
-  
-
-
-
 
 
 // MEDIA QUERIES
+@media (max-width:1210px) {
+    .harper .project-title p {
+            margin-bottom:6%;
+        }
+}
+
 @media (max-width:780px) {
     .work-container .project .overlay a {
         padding:0;
