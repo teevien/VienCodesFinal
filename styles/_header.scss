@@ -3,20 +3,20 @@
         position: -webkit-sticky;
         top:15px;
         z-index:10;
-        
-        p {
-            margin:0;
-            padding:0;
-        }
-    
-        ul {
-            display:flex;
-            flex-direction: column;
-            margin:0;
-            padding:0 0 0 10px;
 
-            li {
-                list-style:none;
+        nav {
+            display:flex;
+            justify-content: space-between;
+        
+            .nav-links {
+                display:flex;
+                padding:2px 0 0 10px;
+                margin:0;
+
+                li {
+                    list-style:none;
+                    margin-right:10px;
+                }
             }
         }
     }
@@ -28,6 +28,7 @@
     .main-title {
         text-align:center;
         @include accentFont(3rem);
+        padding-top:5%;
 
         // animation change words
             // .slidingVertical{
@@ -135,7 +136,7 @@
         }
 
         i {
-            margin-top:25%;
+            margin-top:15%;
             animation-duration: 2s;
             font-size:2rem;
         }
@@ -171,15 +172,6 @@
 // 	100% { opacity: 0; }
 // }
 
-@media (max-width:1026px) {
-    .header .main-title {
-
-        span {
-            padding-left:100px;
-        }
-
-        .bounce{
-            margin-top:20%;
-        }
-    }
-}
+// @media (max-width:470px) {
+//     .
+// }

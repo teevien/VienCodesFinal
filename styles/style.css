@@ -163,21 +163,28 @@ html {
     html body h3 {
       margin: 0 0 2% 31%; }
     html body a {
+      text-decoration: none; }
+    html body nav a {
+      font-family: "Playfair Display", serif;
+      color: #333333;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      margin: 0;
+      margin-left: 20px;
+      border-bottom: 2px solid #D8BFD8;
+      padding: 0 10px; }
+    html body .nav-links a, html body .bounce a {
+      font-family: "Montserrat", sans-serif;
+      color: #333333;
+      letter-spacing: 1.8px;
+      font-size: 1.4rem;
+      margin: 0; }
+    html body section a, html body footer a {
       font-family: "Montserrat", sans-serif;
       color: #333333;
       letter-spacing: 1.8px;
       font-size: 1.4rem;
       margin: 0;
-      text-decoration: none; }
-      html body a:hover {
-        font-weight: bold; }
-    html body .icon-hover {
-      font-family: "Montserrat", sans-serif;
-      color: #333333;
-      letter-spacing: 1.8px;
-      font-size: 1.3rem;
-      margin: 0;
-      text-decoration: none;
       background: -webkit-linear-gradient(45deg, #dae2f8, #d6a4a4);
       background: -o-linear-gradient(45deg, #dae2f8, #d6a4a4);
       background: linear-gradient(45deg, #dae2f8, #d6a4a4);
@@ -187,7 +194,7 @@ html {
       -webkit-transition: background-size .3s;
       -o-transition: background-size .3s;
       transition: background-size .3s; }
-      html body .icon-hover:hover {
+      html body section a:hover, html body footer a:hover {
         background-size: 4px 50px;
         color: #333333; }
     html body .underline {
@@ -238,21 +245,22 @@ html {
   position: -webkit-sticky;
   top: 15px;
   z-index: 10; }
-  .sticky p {
-    margin: 0;
-    padding: 0; }
-  .sticky ul {
+  .sticky nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin: 0;
-    padding: 0 0 0 10px; }
-    .sticky ul li {
-      list-style: none; }
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .sticky nav .nav-links {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 2px 0 0 10px;
+      margin: 0; }
+      .sticky nav .nav-links li {
+        list-style: none;
+        margin-right: 10px; }
 
 .header {
   min-height: 80vh;
@@ -263,7 +271,8 @@ html {
     color: #333333;
     font-size: 3rem;
     text-transform: uppercase;
-    margin: 0; }
+    margin: 0;
+    padding-top: 5%; }
     .header .main-title svg {
       width: 30%; }
     .header .main-title .iconAnimation path {
@@ -340,18 +349,12 @@ html {
       font-size: 2rem;
       margin: 0; }
     .header .main-title i {
-      margin-top: 25%;
+      margin-top: 15%;
       -webkit-animation-duration: 2s;
       animation-duration: 2s;
       font-size: 2rem; }
 
 /*topToBottom Animation*/
-@media (max-width: 1026px) {
-  .header .main-title span {
-    padding-left: 100px; }
-  .header .main-title .bounce {
-    margin-top: 20%; } }
-
 .about-section {
   background: #fcfcfc;
   position: relative;
@@ -484,7 +487,22 @@ html {
     flex-direction: row-reverse; }
     .about-container .image {
       padding-top: 5%;
-      margin-left: 8%; } }
+      margin-left: 8%;
+      width: 50%; }
+    .about-container .content {
+      width: 50%; }
+  .skills .skills-container:first-child {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 45%; } }
+
+@media (max-width: 862px) {
+  .about-container .image {
+    display: none; }
+  .about-container .content {
+    margin: 0 auto; }
+  .skills .skills-container:first-child {
+    margin: 0 auto; } }
 
 @media (max-width: 700px) {
   .about-container {

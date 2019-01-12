@@ -26,27 +26,33 @@ html {
         }
 
         a {
-            @include primaryFont(1.4rem);
             text-decoration:none;
-            &:hover {
-                font-weight:bold;
-            }
         }
-     
-        .icon-hover {
-            @include primaryFont(1.3rem);
-            text-decoration:none;
+
+        nav a {
+            @include accentFont(1.6rem);
+                margin-left:20px;
+                border-bottom:2px solid $accentColor;
+                padding:0 10px;
+        }
+
+         .nav-links a, .bounce a {
+            @include primaryFont(1.4rem);
+        }
+
+        section a, footer a {
+            @include primaryFont(1.4rem);
             background: linear-gradient(45deg, #dae2f8, #d6a4a4);
 	        background-position: 0 100%;
 	        background-repeat: repeat-x;
 	        background-size: 4px 4px;
             transition: background-size .3s;
+
             &:hover {
                 background-size:4px 50px;
                 color:$primaryColor;
             }
         }
-
     
         .underline {
             width:140px;

@@ -36,10 +36,6 @@
 
     .about-container {
        display:flex;
-        // background-image: linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url(../assets/Moonrise.jpg);
-        // border-top:1px solid $primaryColor;
-        // border-left:1px solid $primaryColor;
-        // background-position:50% 50%;
         padding:5% 0 0 5%;
         border-radius: 5px;
 
@@ -75,7 +71,6 @@
         display:flex;
         flex-wrap: wrap;
         width:30%;
-        // margin:;
         // border:1px solid red;
 
         &:first-child {
@@ -148,12 +143,41 @@
 @media (max-width:1026px) {
     .about-container {
         flex-direction: row-reverse;
+
         .image {
             padding-top:5%;
             margin-left:8%;
+            width: 50%;
+        }
+
+        .content {
+            width:50%;
         }
     }
+
+    .skills .skills-container:first-child {
+        margin-left:5%;
+        margin-right:5%;
+        width:45%;
+        // border:1px solid red;
+    }
 }
+
+@media (max-width:862px) {
+    .about-container {
+        .image {
+            display:none;
+        }
+        .content {
+            margin:0 auto;
+        }
+    }
+        .skills .skills-container:first-child {
+        margin:0 auto;
+        }
+}
+
+
 
 @media (max-width:700px) {
     .about-container {
